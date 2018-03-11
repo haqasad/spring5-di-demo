@@ -17,6 +17,9 @@ public class GetterInjectedController {
     }
 
     @Autowired
+    //================================================================================
+    //For setter DI, @Qualifier can be used inside or outside of the method
+    //================================================================================
     public void setGreetingService(@Qualifier("getterGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
