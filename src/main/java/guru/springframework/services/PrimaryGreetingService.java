@@ -8,6 +8,14 @@ import org.springframework.stereotype.Service;
  */
 @Service
 @Primary
+//================================================================================
+// @Primary allows to mark a bean as primary; There is no need of a qualifier to
+// pick the bean marked as primary as spring service
+//================================================================================
+// In this example, GreetingService interface has been implemented four ways.
+// Property, constructor and setter injected dependencies are using
+// @Qualifier but MyController is using @Primary so no @Qualifier is needed
+//================================================================================
 public class PrimaryGreetingService implements GreetingService {
 
     @Override
