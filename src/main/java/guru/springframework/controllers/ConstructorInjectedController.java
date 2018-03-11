@@ -13,6 +13,10 @@ public class ConstructorInjectedController {
 
     private GreetingService greetingService;
 
+    //============================================================================
+    // @Autowired is implicit for Constructor DI so it's optional to mention it
+    // It is a good practice to always mention @Autowired even though it optional
+    //============================================================================
     @Autowired
     public ConstructorInjectedController(GreetingService greetingService) {
         this.greetingService = greetingService;

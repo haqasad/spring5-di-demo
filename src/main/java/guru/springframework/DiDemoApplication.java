@@ -11,6 +11,9 @@ import org.springframework.context.ApplicationContext;
 @SpringBootApplication
 public class DiDemoApplication {
 
+	//============================================================================
+	// THIS IS THE STARTING POINT OF THE APPLICATION
+	//============================================================================
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(DiDemoApplication.class, args);
 
@@ -18,6 +21,13 @@ public class DiDemoApplication {
 
 		controller.hello();
 
+		//========================================================================
+		// Dependency is automatically managed by spring at Property, Setter and
+		// Constructor injection classes. '@Controller' and '@Autowired' are used
+		// to manage dependency
+		//========================================================================
+		// NOTE: The DI classes are not instantiated while usage
+		//========================================================================
 		System.out.println(ctx.getBean(PropertyInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(GetterInjectedController.class).sayHello());
 		System.out.println(ctx.getBean(ConstructorInjectedController.class).sayHello());
