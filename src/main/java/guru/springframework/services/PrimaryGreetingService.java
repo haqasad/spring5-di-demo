@@ -10,6 +10,12 @@ import org.springframework.stereotype.Service;
 @Service
 @Primary
 @Profile({"en", "default"})
+//================================================================================
+// @Profile can take an array of strings
+// For English @Profile takes "en' and for default it takes "default"
+//================================================================================
+// If no profile is active then the default profile will run at run time
+//================================================================================
 public class PrimaryGreetingService implements GreetingService {
 
     @Override
